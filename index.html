@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Armazém Natural</title>
+</head>
+
+<body>
+
+
+    <header class="cabecalho">
+        <img class="cabecalho-imagem" src="img/logo.svg" alt="logo">
+        <h2 class="titulo-header"> Armazém Natural </h2>
+        <div id="divBusca">
+            <input type="text" id="txtBusca" placeholder="Buscar..." required>
+            <button class="botaoMenuPesquisa" style="width:28px;height:30px;">></button>
+        </div>
+        <nav class="cabecalho-menu">
+            <a class="cabecalho-menu-item" href="index.html">Página Inicial</a>
+            <a class="cabecalho-menu-item" href="produtos.html">Produtos</a>
+
+
+        </nav>
+
+    </header>
+
+
+
+
+    <main class="conteudo">
+        <section class="conteudo-principal">
+            <h1 class="armazem-texto">Bem vindo ao Armazém Natural!</h1>
+
+            <div class="carousel">
+                <div data-js="carousel__item" class="carousel__item carousel__item--visible">
+                    <img src="./img/carro3.jpg" />
+                </div>
+
+                <div data-js="carousel__item" class="carousel__item">
+                    <img src="./img/carro1.jpg" />
+                </div>
+
+                <div data-js="carousel__item" class="carousel__item">
+                    <img src="./img/whey.jpg" />
+                </div>
+
+                <div class="carousel__actions">
+                    <button data-js="carousel__button--prev" aria-label="Slide anterior">
+                        < </button>
+
+                            <button data-js="carousel__button--next" aria-label="Próximo slide">
+                                >
+                            </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="produtosPostados">
+
+            <div class="produtos">
+                <div class="ConjuntoProduto">
+                    <img src="img/amendoin.jpg" class="imagens">
+                    <div class="descricaoProdutos">
+                        <h3>Pasta de amendoin 450g</h3>
+                        <p class="valor">R$ 15,99</p>
+                    </div>
+                </div>
+
+
+                <div class="ConjuntoProduto">
+                    <img src="img/aveia.jpg" class="imagens">
+                    <div class="descricaoProdutos">
+                        <h3>Aveia em flocos 200g</h3>
+                        <p class="valor">R$ 3,50</p>
+                    </div>
+                </div>
+
+                <div class="ConjuntoProduto">
+                    <img src="img/salrosa.jpg" class="imagens">
+                    <div class="descricaoProdutos">
+                        <h3>Sal rosa Himalaia 1kg</h3>
+                        <p class="valor">R$ 12,99</p>
+                    </div>
+                </div>
+            </div>
+
+            <section class="formulariouser">
+                <form class="formu" onsubmit="valida()">
+                    <fieldset class="field">
+                        <legend class="legendaform"><b>Formulário</b></legend>
+                        <div>
+                            <label>Nome:</label>
+                            <input type="text" name="nome" id="nome" placeholder="nome..." required>
+                        </div>
+
+                        <div>
+                            <label>E-mail:</label>
+                            <input type="email" name="email" id="email" placeholder="......@gmail.com" required>
+                        </div>
+
+                        <div>
+                            <label>deseja receber e-mails promocionais?</label>
+                            <label class="respostaemail">
+                                <input type="radio" name="devweb" value="sim" checked>sim
+                            </label>
+
+                            <label class="respostaemail">
+                                <input type="radio" name="devweb" value="nao">não
+
+                            </label>
+
+
+                        </div>
+
+
+
+                        <div>
+                            <label>Número:</label>
+                            <input type="tel" name="number" id="number" placeholder="51-99999-9999">
+                        </div>
+
+
+
+                    </fieldset>
+                    <button class="formubotao" type="submit"><b>Concluido</b></button>
+                </form>
+            </section>
+
+
+
+
+        </section>
+
+
+    </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <footer class="rodape">
+        <h1>2022 - Armazém Natural - Canoas / RS</h1>
+
+
+    </footer>
+
+
+
+
+
+    <script src="https://kit.fontawesome.com/ca14b9e508.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://rawgit.com/RobinHerbots/jquery.inputmask/3.x/dist/jquery.inputmask.bundle.js"></script>
+    <script src="JavaScript.js"></script>
+
+    <script>
+
+        function valida() {
+         if(document.getElementById("number").value.length>13){
+             alert("informe no máximo 13 digitos")
+             document.getElementById("number").focus()
+return false;
+
+
+         }
+
+
+        }
+
+
+    </script>
+
+
+
+</body>
+
+</html>
